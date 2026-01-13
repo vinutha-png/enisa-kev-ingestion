@@ -6,7 +6,6 @@ import revd.util
 from revd.operators import ObjectCopyOperator
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 
-# TODO: Replace with the actual URL where the client/ENISA hosts this CSV
 # If this is a manual upload, the workflow might need a Sensor instead of a download
 ENISA_KEV_URL = "https://raw.githubusercontent.com/enisaeu/CNW/refs/heads/main/kev.csv"
 ENISA_KEV_STORE = "{{ params.incoming }}/enisa_kev/dbdate={{ ds_nodash }}/enisa_kev.csv"
